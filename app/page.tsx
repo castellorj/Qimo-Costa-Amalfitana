@@ -65,9 +65,18 @@ export default async function Home() {
           sizes="100vw"
         />
         <div className="scrim-hero absolute inset-0" />
+        {/* Camada localizada (spotlight) para destacar o texto sem escurecer a foto toda */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 80% 62% at 50% 46%, rgba(4,32,60,0.5) 0%, rgba(4,32,60,0.3) 40%, rgba(4,32,60,0.12) 64%, rgba(4,32,60,0) 80%)",
+          }}
+        />
         <div className="text-on-photo relative z-10 mx-auto flex min-h-dvh max-w-2xl flex-col items-center justify-center px-6 py-8 text-center">
           <span className="overline-on-dark">{c.heroKicker}</span>
-          <h1 className="mt-2 font-cormorant text-[clamp(1.75rem,5vw,3.5rem)] font-light uppercase leading-[1.05] tracking-[0.08em] text-balance drop-shadow-[0_2px_20px_rgba(4,32,60,0.55)]">
+          <h1 className="mt-2 font-cormorant text-[clamp(1.75rem,5vw,3.5rem)] font-light uppercase leading-[1.05] tracking-[0.08em] text-balance [text-shadow:0_2px_28px_rgba(4,32,60,0.85),0_1px_3px_rgba(4,32,60,0.6)]">
             {c.heroTitle}
           </h1>
           <p className="mt-3 font-cormorant text-3xl tracking-[0.22em] text-gold-soft sm:text-4xl">
