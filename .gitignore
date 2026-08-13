@@ -1,0 +1,24 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next
+/out
+
+# netlify build output / local state
+/.netlify
+
+# env / secrets
+.env*.local
+.env
+
+# build / misc
+*.tsbuildinfo
+next-env.d.ts
+
+# OS
+.DS_Store
+Thumbs.db
+
+# material de referência da viagem (fica só local, fora do repo/deploy)
+/Qimo Costa Amalfitana

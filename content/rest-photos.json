@@ -1,0 +1,168 @@
+{
+  "sizes": {
+    "michelin": 7,
+    "fine-dining": 10,
+    "beach-club": 5,
+    "sunset": 5,
+    "wine-bar": 3,
+    "traditional": 9
+  },
+  "credits": {
+    "michelin-0": {
+      "photographer": "Julia Volk",
+      "source": "https://www.pexels.com/photo/brown-wooden-tables-and-chairs-5769594/"
+    },
+    "michelin-1": {
+      "photographer": "Julia Volk",
+      "source": "https://www.pexels.com/photo/grayscale-photo-of-a-dining-table-in-a-restaurant-by-the-seaside-5769707/"
+    },
+    "michelin-2": {
+      "photographer": "Zsófia Fehér",
+      "source": "https://www.pexels.com/photo/restaurant-tables-under-white-umbrellas-16853260/"
+    },
+    "michelin-3": {
+      "photographer": "Kate Trysh",
+      "source": "https://www.pexels.com/photo/alfresco-dining-overlooking-dubai-coastline-28369596/"
+    },
+    "michelin-4": {
+      "photographer": "Isa Bödi",
+      "source": "https://www.pexels.com/photo/chairs-and-tables-on-the-shore-5377506/"
+    },
+    "michelin-5": {
+      "photographer": "Pixabay",
+      "source": "https://www.pexels.com/photo/clear-wine-glass-with-red-wine-460537/"
+    },
+    "michelin-6": {
+      "photographer": "Magda Ehlers",
+      "source": "https://www.pexels.com/photo/charming-indoor-restaurant-with-elegant-decor-32568165/"
+    },
+    "fine-dining-0": {
+      "photographer": "Media Loopers",
+      "source": "https://www.pexels.com/photo/chairs-and-table-on-terrace-of-restaurant-in-santorini-greece-6251212/"
+    },
+    "fine-dining-1": {
+      "photographer": "Vladimir Srajber",
+      "source": "https://www.pexels.com/photo/coastal-dining-view-in-primosten-croatia-33473011/"
+    },
+    "fine-dining-2": {
+      "photographer": "Margo Evardson",
+      "source": "https://www.pexels.com/photo/seaside-dining-at-capri-restaurant-mallorca-37549405/"
+    },
+    "fine-dining-3": {
+      "photographer": "Ad Thiry",
+      "source": "https://www.pexels.com/photo/illuminated-terrace-by-sea-18058186/"
+    },
+    "fine-dining-4": {
+      "photographer": "Artūras Kokorevas",
+      "source": "https://www.pexels.com/photo/view-of-empty-tables-and-seats-on-a-terrace-with-the-view-of-the-sea-15986469/"
+    },
+    "fine-dining-5": {
+      "photographer": "Wendy Wei",
+      "source": "https://www.pexels.com/photo/cafe-tables-near-sea-in-coastal-town-on-sunset-14411109/"
+    },
+    "fine-dining-6": {
+      "photographer": "Khalil Sallem",
+      "source": "https://www.pexels.com/photo/photograph-of-empty-chairs-and-tables-near-a-body-of-water-5358330/"
+    },
+    "fine-dining-7": {
+      "photographer": "MUHAMMED TARIK  KAHRAMAN",
+      "source": "https://www.pexels.com/photo/seats-on-patio-of-restaurant-near-marina-in-antalya-turkey-16930554/"
+    },
+    "fine-dining-8": {
+      "photographer": "K",
+      "source": "https://www.pexels.com/photo/people-on-a-terrace-by-the-sea-19143326/"
+    },
+    "fine-dining-9": {
+      "photographer": "Zsófia Fehér",
+      "source": "https://www.pexels.com/photo/restaurant-tables-under-white-umbrellas-16853260/"
+    },
+    "beach-club-0": {
+      "photographer": "Ngoc Nguyen",
+      "source": "https://www.pexels.com/photo/beachfront-lounge-area-with-colorful-bean-bags-37050702/"
+    },
+    "beach-club-1": {
+      "photographer": "Ahmet ÇÖTÜR",
+      "source": "https://www.pexels.com/photo/aerial-view-of-seaside-restaurant-with-umbrellas-29702263/"
+    },
+    "beach-club-2": {
+      "photographer": "Bulat Khamitov",
+      "source": "https://www.pexels.com/photo/blue-and-white-boats-on-beach-sand-5639918/"
+    },
+    "beach-club-3": {
+      "photographer": "Yaroslav Shuraev",
+      "source": "https://www.pexels.com/photo/aerial-view-of-a-resort-on-seaside-4183088/"
+    },
+    "beach-club-4": {
+      "photographer": "Philippe WEICKMANN",
+      "source": "https://www.pexels.com/photo/beach-bars-with-red-umbrellas-under-blue-sky-12869500/"
+    },
+    "sunset-0": {
+      "photographer": "Leonardo Delsabio",
+      "source": "https://www.pexels.com/photo/scenic-rooftop-terrace-in-mar-del-plata-at-sunset-31767815/"
+    },
+    "sunset-1": {
+      "photographer": "Paolo Sbalzer",
+      "source": "https://www.pexels.com/photo/table-at-luxury-restaurant-with-pool-with-snacks-and-drinks-near-sea-25358051/"
+    },
+    "sunset-2": {
+      "photographer": "Elina Sazonova",
+      "source": "https://www.pexels.com/photo/man-standing-near-building-1841548/"
+    },
+    "sunset-3": {
+      "photographer": "Denys Gromov",
+      "source": "https://www.pexels.com/photo/town-on-sea-coast-at-sunset-26063278/"
+    },
+    "sunset-4": {
+      "photographer": "Claudio Siracusano",
+      "source": "https://www.pexels.com/photo/waterway-between-a-city-during-sunset-13710704/"
+    },
+    "wine-bar-0": {
+      "photographer": "Helena Lopes",
+      "source": "https://www.pexels.com/photo/a-person-pouring-wine-in-the-glass-9124690/"
+    },
+    "wine-bar-1": {
+      "photographer": "gravity cut",
+      "source": "https://www.pexels.com/photo/overhead-view-of-glasses-on-a-bar-table-29251126/"
+    },
+    "wine-bar-2": {
+      "photographer": "Tim Durand",
+      "source": "https://www.pexels.com/photo/sommelier-pouring-wine-in-glasses-16547178/"
+    },
+    "traditional-0": {
+      "photographer": "Marina Gr",
+      "source": "https://www.pexels.com/photo/wooden-tables-with-chairs-in-the-restaurant-13059270/"
+    },
+    "traditional-1": {
+      "photographer": "Helena Jankovičová Kováčová",
+      "source": "https://www.pexels.com/photo/orange-building-with-shutters-on-windows-beside-tree-on-paved-street-9025295/"
+    },
+    "traditional-2": {
+      "photographer": "S. Deniz",
+      "source": "https://www.pexels.com/photo/charming-outdoor-restaurant-seating-in-istanbul-29066680/"
+    },
+    "traditional-3": {
+      "photographer": "Francesco Ungaro",
+      "source": "https://www.pexels.com/photo/used-glass-cups-and-coffee-cup-on-the-table-10522898/"
+    },
+    "traditional-4": {
+      "photographer": "Helena Lopes",
+      "source": "https://www.pexels.com/photo/people-eating-appetizers-on-terrace-27177273/"
+    },
+    "traditional-5": {
+      "photographer": "Bas Linders",
+      "source": "https://www.pexels.com/photo/food-on-a-table-14009279/"
+    },
+    "traditional-6": {
+      "photographer": "Alexey Demidov",
+      "source": "https://www.pexels.com/photo/delicious-mouthwatering-fish-10950875/"
+    },
+    "traditional-7": {
+      "photographer": "Rachel Claire",
+      "source": "https://www.pexels.com/photo/plates-and-bowls-with-food-on-a-table-5863638/"
+    },
+    "traditional-8": {
+      "photographer": "Tomáš Mokroš",
+      "source": "https://www.pexels.com/photo/white-and-blue-concrete-house-under-blue-sky-12899251/"
+    }
+  }
+}

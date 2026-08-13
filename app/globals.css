@@ -1,0 +1,282 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   QIMO Croatia Experience — Design System
+   ============================================================ */
+
+@layer base {
+  :root {
+    /* semantic tokens (light surfaces over off-white) */
+    --background: 42 35% 95%;     /* #F7F4EE off white */
+    --foreground: 209 82% 12%;    /* #04203C deep blue */
+    --muted: 40 22% 80%;          /* sand */
+    --muted-foreground: 209 30% 30%;
+    --border: 40 18% 78%;
+    --input: 40 18% 78%;
+    --ring: 41 36% 55%;           /* gold */
+  }
+
+  .dark {
+    --background: 209 82% 9%;
+    --foreground: 42 35% 95%;
+    --muted: 209 40% 18%;
+    --muted-foreground: 40 18% 70%;
+    --border: 209 35% 22%;
+    --input: 209 35% 22%;
+    --ring: 41 36% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    /* Larger base for the 40–65 audience: text-base=18px, text-xl=22px,
+       text-4xl=36px — meeting the minimum type sizes for readability in sun. */
+    font-size: 112.5%;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    /* Compensa a barra fixa da logo: âncoras e "voltar ao topo"/rolagem param
+       logo abaixo da barra (~63px compacta), preenchendo com o fundo da própria
+       seção — sem deixar aparecer uma faixa da seção anterior. */
+    scroll-padding-top: 3.25rem;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-offwhite text-deep font-sans antialiased leading-[1.7];
+    font-feature-settings: "ss01", "liga", "kern";
+  }
+
+  /* Editorial type defaults */
+  h1, h2, h3 {
+    @apply font-cormorant font-light tracking-tight;
+  }
+
+  ::selection {
+    background: #b89b5e;
+    color: #04203c;
+  }
+
+  /* Slim, luxe scrollbar */
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(184, 155, 94, 0.4);
+    border-radius: 999px;
+  }
+}
+
+@layer components {
+  /* The luxe overline — small caps, wide tracking.
+     On light surfaces use deep (WCAG AA); the gold variant is for dark heroes. */
+  .overline {
+    @apply font-sans text-[0.82rem] font-semibold uppercase tracking-luxe text-deep-700;
+  }
+  .overline-on-dark {
+    /* Brighter gold + heavier weight: the mid-gold loses contrast over photos
+       for older eyes; gold-light holds up far better against bright areas. */
+    @apply font-sans text-[0.9rem] font-semibold uppercase tracking-luxe text-gold-soft;
+  }
+
+  /* Editorial reading column — generous line-height for 40+ readers */
+  .prose-editorial p {
+    @apply font-sans text-[1.15rem] leading-[1.7] text-deep mb-5;
+  }
+
+  /* Hairline divider */
+  .rule-gold {
+    @apply h-px w-12 bg-gold/60;
+  }
+
+  /* Superfície das barras de navegação fixas. Sem backdrop-filter de propósito:
+     blur em elemento fixo sempre-visível reborra a cada frame de scroll e trava
+     em celulares comuns. Fundo quase opaco dá o mesmo ar premium sem custo. */
+  .glass {
+    background: rgba(247, 244, 238, 0.92);
+  }
+  .glass-dark {
+    background: rgba(4, 32, 60, 0.85);
+  }
+}
+
+@layer utilities {
+  /* Cinematic image scrims — tuned so overlaid text always sits on a dark
+     base (legibility for the 40–65 audience, in sun / on deck). */
+  .scrim-bottom {
+    background: linear-gradient(
+      to top,
+      rgba(4, 32, 60, 0.98) 0%,
+      rgba(4, 32, 60, 0.92) 22%,
+      rgba(4, 32, 60, 0.72) 42%,
+      rgba(4, 32, 60, 0.4) 64%,
+      rgba(4, 32, 60, 0.12) 84%,
+      rgba(4, 32, 60, 0) 100%
+    );
+  }
+  /* Home / full-height heroes: progressive darkening that keeps a minimum
+     tint even at the very top, so the tall text block reads at any height
+     and over bright skies — without hiding the photograph. */
+  .scrim-hero {
+    background: linear-gradient(
+      to top,
+      rgba(4, 32, 60, 0.99) 0%,
+      rgba(4, 32, 60, 0.94) 30%,
+      rgba(4, 32, 60, 0.8) 48%,
+      rgba(4, 32, 60, 0.58) 64%,
+      rgba(4, 32, 60, 0.36) 82%,
+      rgba(4, 32, 60, 0.22) 100%
+    );
+  }
+  .scrim-full {
+    background:
+      linear-gradient(
+        to top,
+        rgba(4, 32, 60, 0.88) 0%,
+        rgba(4, 32, 60, 0.45) 50%,
+        rgba(4, 32, 60, 0.55) 100%
+      ),
+      radial-gradient(
+        ellipse at center,
+        rgba(4, 32, 60, 0.5) 0%,
+        rgba(4, 32, 60, 0) 72%
+      );
+  }
+
+  /* Text laid directly over a photo — a soft dark halo guarantees contrast
+     even where the image runs bright (sky, water, stone). */
+  .text-on-photo {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), 0 2px 10px rgba(4, 32, 60, 0.6),
+      0 4px 30px rgba(4, 32, 60, 0.7);
+  }
+
+  /* Fine film grain overlay */
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  /* Hide scrollbar where needed (filter rails) */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+  .pt-safe { padding-top: env(safe-area-inset-top); }
+}
+
+/* CTA da capa — "placa dourada" de luxo: moldura interna, brilho de relevo no
+   topo e um shimmer (folha de ouro) que cruza de tempos em tempos. */
+.btn-luxe {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.2s ease;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),       /* brilho no topo (convexo) */
+    inset 0 -5px 9px rgba(120, 86, 30, 0.2),      /* sombra interna inferior */
+    0 10px 24px -8px rgba(4, 32, 60, 0.5);        /* elevação (sombra desfocada) */
+}
+.btn-luxe:active {
+  transform: translateY(2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -3px 6px rgba(120, 86, 30, 0.18),
+    0 6px 14px -8px rgba(4, 32, 60, 0.45);
+}
+/* brilho de relevo (constante, atrás do texto) */
+.btn-luxe::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0) 55%);
+}
+/* shimmer diagonal que varre a placa */
+.btn-luxe::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -160%;
+  width: 55%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  transform: skewX(-20deg);
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation: luxeShimmer 5.5s ease-in-out infinite;
+}
+.btn-luxe > * { position: relative; z-index: 1; }
+.btn-luxe:hover::after { animation-duration: 1.4s; }
+@keyframes luxeShimmer {
+  0% { left: -160%; }
+  55%, 100% { left: 160%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn-luxe::after { animation: none; }
+  /* Público 40+ / acessibilidade: quem pede menos movimento recebe menos.
+     Zera Ken Burns, revelações, bounce da seta, shimmer e transições. */
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Foco visível de teclado (acessibilidade) — anel dourado nítido. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #d2bb87;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---- Campo de telefone do gate de acesso (react-phone-number-input) ---- */
+.qimo-access .PhoneInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(4, 32, 60, 0.2);
+  border-radius: 0.5rem;
+  background: #fff;
+  padding: 0 14px;
+  min-height: 56px;
+}
+.qimo-access .PhoneInput:focus-within { border-color: #b89b5e; }
+.qimo-access .PhoneInputInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.1rem;
+  color: #04203c;
+  min-height: 54px;
+  letter-spacing: 0.01em;
+}
+.qimo-access .PhoneInputInput::placeholder { color: rgba(4, 32, 60, 0.35); }
+.qimo-access .PhoneInputCountryIcon { width: 30px; height: 22px; box-shadow: 0 0 0 1px rgba(4, 32, 60, 0.08); }
+.qimo-access .PhoneInputCountrySelectArrow { color: #04203c; opacity: 0.45; width: 7px; height: 7px; margin-left: 6px; }
+/* O <select> nativo de país herda a cor clara do container da capa (.text-on-photo,
+   texto branco sobre a foto), deixando as opções quase brancas no desktop. Força
+   texto escuro sobre fundo branco no select e em cada <option>. */
+.qimo-access .PhoneInputCountrySelect { color: #04203c; }
+.qimo-access .PhoneInputCountrySelect option { color: #04203c; background: #fff; }
+
+/* O modal de acesso fica dentro do container ".text-on-photo" da capa, que
+   aplica text-shadow para legibilidade sobre a foto — isso borrava o texto do
+   modal. Zera a sombra dentro do modal (fundo claro, não precisa). */
+.qimo-access, .qimo-access * { text-shadow: none !important; }

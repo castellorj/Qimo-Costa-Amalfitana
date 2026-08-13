@@ -1,0 +1,398 @@
+{
+  "groupName": "QIMO Sicília & Costa Amalfitana",
+  "vessel": "Variety Voyager",
+  "startDate": "2027-07-03",
+  "endDate": "2027-07-10",
+  "heroYear": "2027",
+  "heroOverline": "La Dolce Vita sul Mare — de Malta à Costa Amalfitana",
+  "heroKicker": "La Dolce Vita sul Mare",
+  "heroTitle": "Sicília & Costa Amalfitana",
+  "heroSubtitle": "Sete noites entre Malta, a Sicília, as Ilhas Eólias e a Costa Amalfitana — um só navio boutique, dez paradas inesquecíveis.",
+  "heroCities": "Valletta · Siracusa · Taormina · Lipari · Stromboli · Capri · Positano · Amalfi · Sorrento · Nápoles",
+  "heroNights": "7 noites",
+  "shareTitle": "03 – 10 de Julho de 2027",
+  "shareDescription": "La Dolce Vita sul Mare — de Valletta a Nápoles a bordo de um navio boutique. 10 paradas entre Malta, Sicília, Ilhas Eólias e a Costa Amalfitana. Um roteiro de referência, personalizável.",
+  "guestsNote": "Grupo fechado · 72 hóspedes",
+  "waitlistCta": "Quero saber mais sobre esta viagem",
+  "entryEnabled": false,
+  "entryKicker": "Apresentação exclusiva",
+  "entryTitle": "Sicília &",
+  "entrySubtitle": "Costa Amalfitana",
+  "entryCta": "Ver a viagem",
+  "entryImage": "/images/amalfi/hero-desktop-02.jpg",
+  "manifesto": "Um roteiro de referência, desenhado para inspirar — e 100% personalizável para o seu grupo.",
+  "showManifesto": true,
+  "showDates": true,
+  "pillars": [
+    {
+      "title": "Um navio boutique",
+      "body": "36 cabines, 72 hóspedes. O Mediterrâneo no seu ritmo."
+    },
+    {
+      "title": "Dez paradas curadas",
+      "body": "De Valletta a Nápoles, um só hotel flutuante."
+    },
+    {
+      "title": "Roteiro personalizável",
+      "body": "Cada viagem QIMO é feita sob medida."
+    },
+    {
+      "title": "Concierge QIMO",
+      "body": "Cuidado e curadoria do início ao fim."
+    }
+  ],
+  "roteiroKicker": "O roteiro · personalizável",
+  "roteiroTitle": "Dez paradas, um só hotel",
+  "roteiro": [
+    {
+      "slug": "valletta",
+      "day": 1,
+      "name": "Valletta",
+      "tagline": "Malta · a estreia sobre o Grand Harbour.",
+      "photo": "/images/amalfi/valletta-grand-harbour.jpg",
+      "intro": "Embarque em Valletta, a capital fortificada de Malta — cidade barroca Patrimônio da UNESCO, debruçada sobre um dos portos naturais mais imponentes do Mediterrâneo.\n\nA primeira noite a bordo começa aqui, entre bastiões dourados e o mar aberto que dará o tom dos próximos sete dias.",
+      "pois": [
+        {
+          "name": "Concatedral de São João",
+          "description": "Barroco maltês em ouro e mármore, com o Caravaggio da ilha."
+        },
+        {
+          "name": "Upper Barrakka Gardens",
+          "description": "A vista clássica sobre o Grand Harbour ao pôr do sol."
+        },
+        {
+          "name": "Sabores malteses",
+          "description": "Frutos do mar e pão ftira; vinhos das castas Girgentina e Ġellewża."
+        }
+      ]
+    },
+    {
+      "slug": "siracusa",
+      "day": 2,
+      "name": "Siracusa",
+      "tagline": "Sicília · Ortigia ao entardecer.",
+      "photo": "/images/amalfi/siracusa-ortigia-sunset.jpg",
+      "intro": "A antiga rival de Atenas, hoje um dos cantos mais luminosos da Sicília. O coração pulsa na ilha de Ortigia, um labirinto barroco cercado de mar.\n\nDo Teatro Grego à Fonte Aretusa, tudo aqui respira história — e o mercado de Ortigia entrega a Sicília no prato.",
+      "pois": [
+        {
+          "name": "Ilha de Ortigia",
+          "description": "Ruelas barrocas, o Duomo e a Fonte Aretusa à beira-mar."
+        },
+        {
+          "name": "Teatro Grego",
+          "description": "Um dos maiores da antiguidade, esculpido na rocha."
+        },
+        {
+          "name": "Mercado de Ortigia",
+          "description": "Peixe cru, pistache e o Nero d'Avola da região."
+        }
+      ]
+    },
+    {
+      "slug": "taormina",
+      "day": 2,
+      "name": "Taormina",
+      "tagline": "Sicília · o Etna ao fundo.",
+      "photo": "/images/amalfi/taormina-teatro-etna.jpg",
+      "intro": "Pendurada sobre o mar Jônico, com o Etna fumegando ao fundo, Taormina é a Sicília mais glamourosa. O Teatro Antigo emoldura o vulcão como nenhum outro palco no mundo.\n\nO Corso Umberto convida a caminhar sem pressa, entre granita, cannoli e as vistas que encantaram o mundo.",
+      "pois": [
+        {
+          "name": "Teatro Antigo",
+          "description": "Grego-romano, com o Etna e o mar como cenário."
+        },
+        {
+          "name": "Isola Bella",
+          "description": "A pequena reserva natural ligada à praia por uma língua de areia."
+        },
+        {
+          "name": "Etna Rosso & Bianco",
+          "description": "Vinhos das encostas vulcânicas; granita com brioche pela manhã."
+        }
+      ]
+    },
+    {
+      "slug": "lipari",
+      "day": 3,
+      "name": "Lipari",
+      "tagline": "Eólias · enseadas turquesa.",
+      "photo": "/images/amalfi/lipari-pumice-cove.jpg",
+      "intro": "A maior das Ilhas Eólias, arquipélago vulcânico Patrimônio da UNESCO. Lipari mistura vilarejos coloridos, um castelo sobre o mar e enseadas de água impossivelmente clara.\n\nO dia é de explorar as calas de barco, mergulhar e provar a Malvasia delle Lipari — o néctar dourado das ilhas.",
+      "pois": [
+        {
+          "name": "Castelo de Lipari",
+          "description": "A acrópole fortificada com vista para todo o arquipélago."
+        },
+        {
+          "name": "Enseadas de barco",
+          "description": "Águas turquesa, praias de pedra-pomes e paradas para banho."
+        },
+        {
+          "name": "Malvasia delle Lipari",
+          "description": "Peixe fresco, alcaparras e o vinho doce das Eólias."
+        }
+      ]
+    },
+    {
+      "slug": "stromboli",
+      "day": 4,
+      "name": "Stromboli",
+      "tagline": "Eólias · o vulcão em erupção à noite.",
+      "photo": "/images/amalfi/stromboli-night-navigation.jpg",
+      "intro": "O vulcão mais ativo da Europa, sempre aceso. Ao anoitecer, o navio navega diante da Sciara del Fuoco — a encosta por onde a lava desce ao mar em espetáculo contínuo.\n\nJantar a bordo sob as erupções incandescentes: um dos momentos mais cinematográficos de toda a viagem.",
+      "pois": [
+        {
+          "name": "Sciara del Fuoco",
+          "description": "A navegação noturna diante da encosta de fogo."
+        },
+        {
+          "name": "Jantar a bordo",
+          "description": "Servido no deck, sob as erupções do vulcão."
+        },
+        {
+          "name": "Brinde ao anoitecer",
+          "description": "No deck panorâmico, com o mar e o vulcão de cenário."
+        }
+      ]
+    },
+    {
+      "slug": "capri",
+      "day": 5,
+      "name": "Capri",
+      "tagline": "Campânia · os Faraglioni vistos do mar.",
+      "photo": "/images/amalfi/hero-desktop-02.jpg",
+      "intro": "A ilha-símbolo do glamour italiano. Do mar, os Faraglioni se erguem como três sentinelas de pedra; na Gruta Azul, a luz transforma a água em néon.\n\nEm terra, a Piazzetta, os jardins de Augusto e o limoncello que nasceu nestas encostas.",
+      "pois": [
+        {
+          "name": "Gruta Azul",
+          "description": "A caverna onde a luz do mar acende um azul elétrico."
+        },
+        {
+          "name": "Faraglioni",
+          "description": "Os três rochedos icônicos, vistos do convés."
+        },
+        {
+          "name": "Sabores caprese",
+          "description": "Ravioli e insalata caprese, limoncello, Falanghina e Greco di Tufo."
+        }
+      ]
+    },
+    {
+      "slug": "positano",
+      "day": 6,
+      "name": "Positano",
+      "tagline": "Costa Amalfitana · a vila que desce ao mar.",
+      "photo": "/images/amalfi/hero-desktop-03.jpg",
+      "intro": "A imagem-postal da Costa Amalfitana: casas em tons pastel empilhadas na encosta até a Praia Grande, com a cúpula de majólica da Igreja de Santa Maria Assunta no centro.\n\nUm dia para viver o dolce far niente — peixe grelhado à beira-mar, sandálias sob medida e o azul infinito.",
+      "pois": [
+        {
+          "name": "Spiaggia Grande",
+          "description": "A praia principal, aos pés das casas coloridas."
+        },
+        {
+          "name": "Santa Maria Assunta",
+          "description": "A igreja da cúpula de majólica, coração de Positano."
+        },
+        {
+          "name": "Sabores da encosta",
+          "description": "Peixe grelhado, delícias ao limão e os brancos de Furore."
+        }
+      ]
+    },
+    {
+      "slug": "amalfi",
+      "day": 6,
+      "name": "Amalfi",
+      "tagline": "Costa Amalfitana · a antiga república marítima.",
+      "photo": "/images/amalfi/amalfi-beach-club.jpg",
+      "intro": "Que deu nome a toda a costa. Um dia, poderosa república marítima; hoje, uma joia de vielas brancas subindo a montanha a partir da praça do Duomo.\n\nO Duomo de Sant'Andrea e o Claustro do Paraíso guardam o esplendor árabe-normando, entre limões gigantes e o mar azul-cobalto.",
+      "pois": [
+        {
+          "name": "Duomo de Sant'Andrea",
+          "description": "A catedral no alto da escadaria, com fachada árabe-normanda."
+        },
+        {
+          "name": "Claustro do Paraíso",
+          "description": "Arcos entrelaçados de um dos claustros mais belos da Itália."
+        },
+        {
+          "name": "Costa d'Amalfi DOC",
+          "description": "Scialatielli ai frutti di mare e a delizia al limone."
+        }
+      ]
+    },
+    {
+      "slug": "sorrento",
+      "day": 7,
+      "name": "Sorrento",
+      "tagline": "Península Sorrentina · terraços de limoeiros.",
+      "photo": "/images/amalfi/sorrento-lemons.jpg",
+      "intro": "Debruçada sobre o Golfo de Nápoles, entre falésias de tufo e terraços de limoeiros. Sorrento é elegante e luminosa, com um centro histórico feito para o entardecer.\n\nDa Villa Comunale, o pôr do sol pinta a baía e o Vesúvio ao fundo — com um limoncello artesanal na mão.",
+      "pois": [
+        {
+          "name": "Villa Comunale",
+          "description": "O terraço com a vista para a baía e o Vesúvio ao pôr do sol."
+        },
+        {
+          "name": "Centro histórico",
+          "description": "Ruelas, marchetaria e os limões gigantes da península."
+        },
+        {
+          "name": "Gnocchi alla sorrentina",
+          "description": "Com limoncello artesanal e o Lacryma Christi do Vesúvio."
+        }
+      ]
+    },
+    {
+      "slug": "napoles",
+      "day": 8,
+      "name": "Nápoles",
+      "tagline": "Gran finale · o golfo e o Vesúvio.",
+      "photo": "/images/amalfi/naples-bay-vesuvius.jpg",
+      "intro": "O grande final. Nápoles é intensa, teatral e inesquecível — o golfo emoldurado pelo Vesúvio, o centro histórico Patrimônio da UNESCO e a energia napolitana em cada esquina.\n\nDesembarque com o sabor da autêntica pizza napolitana e do espresso mais famoso da Itália.",
+      "pois": [
+        {
+          "name": "Centro histórico",
+          "description": "Ruas UNESCO, igrejas e a Cappella Sansevero."
+        },
+        {
+          "name": "Pizza napolitana",
+          "description": "A original, onde ela nasceu, com espresso italiano."
+        },
+        {
+          "name": "Lacryma Christi del Vesuvio",
+          "description": "O vinho das encostas do vulcão para o brinde de despedida."
+        }
+      ]
+    }
+  ],
+  "roteiroPhotos": {},
+  "boatKicker": "A bordo · o navio",
+  "boatTitle": "Variety Voyager",
+  "boatCapacity": "36 cabines · até 72 hóspedes · 29 tripulantes",
+  "boatNote": "Um navio boutique para o grupo, com apenas 36 cabines. Restaurante e alta gastronomia a bordo, lounge e bar panorâmico, amplos decks e solário ao ar livre, e serviço personalizado e discreto.",
+  "boatPhotos": [
+    { "type": "photo", "src": "/images/amalfi/voyager-exterior.jpg", "alt": "O Variety Voyager visto do mar" },
+    { "type": "photo", "src": "/images/amalfi/voyager-navegando.jpg", "alt": "O navio navegando pela costa" },
+    { "type": "photo", "src": "/images/amalfi/voyager-deck-lipari.jpg", "alt": "Deck e solário" },
+    { "type": "photo", "src": "/images/amalfi/voyager-lounge.jpg", "alt": "Lounge e bar panorâmico" },
+    { "type": "photo", "src": "/images/amalfi/voyager-mesa.jpg", "alt": "Restaurante a bordo" },
+    { "type": "photo", "src": "/images/amalfi/voyager-ancorado.jpg", "alt": "O navio ancorado em enseada" },
+    { "type": "photo", "src": "/images/amalfi/voyager-exterior-2.jpg", "alt": "O Variety Voyager" },
+    { "type": "photo", "src": "/images/amalfi/voyager-sundeck.jpg", "alt": "Sundeck e solário" },
+    { "type": "photo", "src": "/images/amalfi/voyager-restaurante.jpg", "alt": "Restaurante a bordo" },
+    { "type": "photo", "src": "/images/amalfi/voyager-jantar.jpg", "alt": "Jantar a bordo" },
+    { "type": "photo", "src": "/images/amalfi/voyager-cafe-da-manha.jpg", "alt": "Café da manhã em buffet" },
+    { "type": "photo", "src": "/images/amalfi/voyager-owners-suite.jpg", "alt": "Owner's Suite" }
+  ],
+  "included": [
+    {
+      "label": "7 noites a bordo do Variety Voyager",
+      "detail": "cabine privativa, de Valletta a Nápoles"
+    },
+    {
+      "label": "Meia pensão",
+      "detail": "café da manhã em buffet, uma refeição principal por dia e o jantar do capitão"
+    },
+    {
+      "label": "Coquetéis de boas-vindas e despedida",
+      "detail": "no embarque e no último dia"
+    },
+    {
+      "label": "Ao longo do dia",
+      "detail": "bolo, biscoitos, frutas, café filtrado, chá e água purificada"
+    },
+    {
+      "label": "Tripulação de 29 membros",
+      "detail": "serviço dedicado ao grupo QIMO"
+    },
+    {
+      "label": "Combustível de navegação",
+      "detail": "média de 6 horas diárias entre as paradas"
+    }
+  ],
+  "notIncluded": "Bebidas alcoólicas, excursões em terra, despesas pessoais (Wi-Fi, lavanderia, spa), tenders locais onde não houver atracamento, gorjetas da tripulação (€20 por pessoa/dia), taxa de sustentabilidade (€70 por pessoa) e taxas portuárias (€390 por pessoa).",
+  "priceLabel": "A partir de",
+  "priceFrom": "€ 5.950 por pessoa",
+  "priceNote": "Valor da cabine C (deck inferior). Cinco categorias, de €5.950 à Owner's Suite (€8.800). Fale com a QIMO para valores por categoria e condições.",
+  "valueKicker": "Cabines e investimento",
+  "valueTitle": "Valores por cabine",
+  "faqKicker": "Antes de embarcar",
+  "faqTitle": "Principais dúvidas",
+  "faq": [
+    {
+      "q": "O roteiro pode ser personalizado?",
+      "a": "Sim. Este roteiro é uma referência, desenhado para inspirar. Cada viagem QIMO é feita sob medida — ajustamos paradas, ritmo e experiências ao perfil do seu grupo."
+    },
+    {
+      "q": "Como é o Variety Voyager?",
+      "a": "Um navio boutique com 36 cabines para até 72 hóspedes e tripulação de 29 membros. Cinco categorias de cabine em três decks — Oceans (inferior), Riviera (principal) e Infinity (superior). Restaurante e alta gastronomia a bordo, lounge e bar panorâmico, amplos decks e solário."
+    },
+    {
+      "q": "Quais são as categorias de cabine e os valores?",
+      "a": "Cabine C (deck inferior) €5.950 · Cabine B €6.350 · Cabine A (deck principal) €7.300 · Cabine P (deck superior) €7.750 · Owner's Suite €8.800. Valores por pessoa, em euros. O que muda é a posição no navio, o tipo de janela, a flexibilidade das camas e o espaço."
+    },
+    {
+      "q": "Para quem é esta viagem?",
+      "a": "Um grupo fechado de viajantes que valorizam privacidade, conforto e curadoria. Casais, famílias e amigos são bem-vindos."
+    },
+    {
+      "q": "Como funciona a reserva?",
+      "a": "É simples: chame no WhatsApp ou deixe o seu contato. Retornamos com datas, cabines e valores para acertar tudo com calma, sem compromisso."
+    }
+  ],
+  "faqTopics": [
+    {
+      "title": "Embarque & desembarque",
+      "enabled": true,
+      "body": "Embarque: Valletta, Malta — 03 de julho de 2027\nDesembarque: Nápoles, Itália — 10 de julho de 2027\nHorários e endereço do terminal seguem no dossiê de viagem\nDica: chegue 1 a 2 dias antes para conhecer Malta com calma"
+    },
+    {
+      "title": "O que está incluído",
+      "enabled": true,
+      "body": "7 noites a bordo, em cabine privativa, de Valletta a Nápoles\nMeia pensão: café da manhã em buffet e uma refeição principal por dia, mais o jantar do capitão\nCoquetéis de boas-vindas e de despedida\nAo longo do dia: bolo, biscoitos, frutas, café filtrado, chá e água purificada\nTripulação de 29 membros dedicada ao grupo QIMO\nCombustível de navegação (média de 6 horas diárias)"
+    },
+    {
+      "title": "O que não está incluído",
+      "enabled": true,
+      "body": "Bebidas alcoólicas\nExcursões em terra\nDespesas pessoais: Wi-Fi, lavanderia, spa\nTenders locais, onde o atracamento não for possível\nGorjetas da tripulação: €20 por pessoa/dia\nTaxa de sustentabilidade: €70 por pessoa\nTaxas portuárias: €390 por pessoa"
+    },
+    {
+      "title": "Rotina a bordo",
+      "enabled": true,
+      "body": "Média de 6 horas de navegação por dia, quase sempre de manhã cedo ou à noite\nCafé da manhã em buffet e uma refeição principal a bordo\nTardes livres em terra, para explorar cada porto\nMar e navegação: a rota é costeira; quem tem sensibilidade a movimento deve trazer a medicação de costume\nO roteiro pode ser ajustado por clima, segurança ou pelo desejo do grupo"
+    },
+    {
+      "title": "Wi-Fi, moeda e tomadas",
+      "enabled": true,
+      "body": "Wi-Fi: serviço de bordo pago, à parte da tarifa; o sinal varia conforme a posição do navio. Em terra, boa cobertura de celular em todos os portos\nMoeda: Euro (€) em Malta e na Itália; leve algum dinheiro em espécie para gorjetas e mercados\nTomadas: rede de 230V — dois pinos redondos na Itália e padrão britânico em Malta"
+    },
+    {
+      "title": "Pagamentos & documentos",
+      "enabled": true,
+      "body": "Condições e formas de pagamento conforme contratado\nPassaporte válido por pelo menos seis meses após a data de retorno\nVistos (Brasil): não exigido para turismo até 90 dias no espaço Schengen — confira as regras vigentes"
+    }
+  ],
+  "pastEditions": [
+    { "type": "photo", "src": "/images/amalfi/edicao-01.jpeg", "alt": "Edição anterior · o grupo à mesa" },
+    { "type": "photo", "src": "/images/amalfi/edicao-02.jpeg", "alt": "Edição anterior" },
+    { "type": "photo", "src": "/images/amalfi/edicao-03.jpeg", "alt": "Edição anterior" },
+    { "type": "photo", "src": "/images/amalfi/edicao-04.jpeg", "alt": "Edição anterior" },
+    { "type": "photo", "src": "/images/amalfi/edicao-05.jpeg", "alt": "Edição anterior" },
+    { "type": "photo", "src": "/images/amalfi/edicao-06.jpeg", "alt": "Edição anterior · banho de mar" },
+    { "type": "photo", "src": "/images/amalfi/edicao-07.jpeg", "alt": "Edição anterior" },
+    { "type": "photo", "src": "/images/amalfi/edicao-08.jpeg", "alt": "Edição anterior" },
+    { "type": "photo", "src": "/images/amalfi/edicao-09.jpeg", "alt": "Edição anterior" },
+    { "type": "photo", "src": "/images/amalfi/edicao-10.jpeg", "alt": "Edição anterior" },
+    { "type": "photo", "src": "/images/amalfi/edicao-11.jpeg", "alt": "Edição anterior" },
+    { "type": "photo", "src": "/images/amalfi/edicao-12.jpeg", "alt": "Edição anterior" }
+  ],
+  "pastKicker": "Edições anteriores",
+  "pastTitle": "Como foram as viagens",
+  "pastSubtitle": "Fotos de quem já viveu essa experiência com a QIMO nessa embarcação.",
+  "finaleTitle": "O Mediterrâneo te espera",
+  "finaleAboard": "a bordo do",
+  "footerNote": "Uma experiência privada no Mediterrâneo · {datas} · por QIMO",
+  "navBarco": "O navio",
+  "instagramUrl": "https://instagram.com/qimobr",
+  "siteUrl": "https://qimobr.com"
+}

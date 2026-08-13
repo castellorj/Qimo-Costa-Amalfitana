@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2000" preserveAspectRatio="xMidYMid slice" role="img">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1A2E47"/>
+      <stop offset="0.62" stop-color="#B89B5E"/>
+      <stop offset="0.78" stop-color="#E8C98F"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#F0D69E" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#F0D69E" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#F0D69E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5C4B3A"/>
+      <stop offset="1" stop-color="#040F1D"/>
+    </linearGradient>
+    <linearGradient id="vig" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0.28"/>
+      <stop offset="0.35" stop-color="#000" stop-opacity="0"/>
+      <stop offset="0.8" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#04203C" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="2000" fill="url(#sky)"/>
+  
+  <circle cx="500" cy="701" r="504" fill="url(#sun)"/>
+  <circle cx="500" cy="701" r="210" fill="#F0D69E" opacity="0.9"/>
+
+  <rect x="0" y="1119" width="1600" height="881" fill="url(#sea)"/>
+  <rect x="0" y="1119" width="1600" height="6" fill="#E8C98F" opacity="0.5"/>
+  <path d="M0,2000 L0,1009 Q133,1009 267,1041 Q400,1041 533,1015 Q667,1015 800,1117 Q933,1117 1067,1151 Q1200,1151 1333,1069 Q1467,1069 1600,1150 L1600,2000 Z" fill="#0A2236"/><path d="M0,2000 L0,1105 Q133,1105 267,1095 Q400,1095 533,1192 Q667,1192 800,1103 Q933,1103 1067,1158 Q1200,1158 1333,1155 Q1467,1155 1600,1132 L1600,2000 Z" fill="#06192B"/><path d="M0,2000 L0,1270 Q133,1270 267,1188 Q400,1188 533,1228 Q667,1228 800,1246 Q933,1246 1067,1227 Q1200,1227 1333,1257 Q1467,1257 1600,1268 L1600,2000 Z" fill="#040F1D"/>
+
+  <rect width="1600" height="2000" fill="url(#vig)"/>
+</svg>

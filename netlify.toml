@@ -1,0 +1,35 @@
+# Netlify — QIMO Sicília & Costa Amalfitana 2027 (proposta / landing de reserva)
+# Next.js 15 App Router. Site próprio: ladolcevita.qimobr.com
+[build]
+  command = "next build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Runtime oficial do Next.js (SSR, server components, next/image, next/og).
+# Necessário para o site ler o banco em tempo de execução — sem ele o conteúdo
+# do /admin só apareceria depois de um novo deploy.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Cache longo para assets estáticos de /public (fotos, logo, ícones).
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
