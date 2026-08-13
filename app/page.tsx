@@ -68,7 +68,7 @@ export default async function Home() {
         <div className="scrim-hero absolute inset-0" />
         <div className="text-on-photo relative z-10 mx-auto flex min-h-dvh max-w-2xl flex-col items-center justify-center px-6 py-8 text-center">
           <span className="overline-on-dark">{c.heroKicker}</span>
-          <h1 className="mt-2 font-cormorant text-6xl font-normal uppercase leading-[0.92] tracking-[0.05em] text-balance drop-shadow-[0_2px_20px_rgba(4,32,60,0.55)] sm:text-8xl">
+          <h1 className="mt-2 font-cormorant text-[clamp(2.5rem,6.4vw,4.5rem)] font-normal uppercase leading-[0.95] tracking-[0.05em] text-balance drop-shadow-[0_2px_20px_rgba(4,32,60,0.55)]">
             {c.heroTitle}
           </h1>
           <p className="mt-3 font-cormorant text-3xl tracking-[0.22em] text-gold-soft sm:text-4xl">
