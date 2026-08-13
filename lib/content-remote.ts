@@ -1,5 +1,6 @@
 import { proposal, type PastMedia, type FaqTopic, type RoteiroCity } from "@/content/proposal";
 import { destinations } from "@/content";
+import { cabins as defaultCabins, cabinsNote as defaultCabinsNote, type Cabin } from "@/content/cabins";
 import frozenContent from "@/content/base-content.json";
 import { PROPOSAL_ID } from "./proposal-id";
 
@@ -100,6 +101,10 @@ export type EditableContent = {
   boatCapacity: string;
   boatNote: string;
   boatPhotos: PastMedia[];
+  /** Categorias de cabine (nome, deck, preço, specs, foto) — editável no /admin. */
+  cabins: Cabin[];
+  /** Nota abaixo do carrossel de cabines. */
+  cabinsNote: string;
   /** Roteiro completo e editável (dia, cidade, chamada, textos, destaques). */
   roteiro: RoteiroCity[];
   /** LEGADO: fotos do roteiro por cidade (slug → URL). Migrado para `roteiro`. */
@@ -180,6 +185,8 @@ export const defaults: EditableContent = {
   boatCapacity: "18 a 19 cabines",
   boatNote: proposal.boatNote,
   boatPhotos: proposal.boatPhotos,
+  cabins: defaultCabins,
+  cabinsNote: defaultCabinsNote,
   roteiro: defaultRoteiro,
   roteiroPhotos: {},
   instagramUrl: proposal.instagramUrl,
@@ -242,6 +249,7 @@ export async function getEditableContent(): Promise<EditableContent> {
       pastEditions: Array.isArray(data.pastEditions) ? data.pastEditions : base.pastEditions,
       boatPhotos: Array.isArray(data.boatPhotos) ? data.boatPhotos : base.boatPhotos,
       faqTopics: Array.isArray(data.faqTopics) ? data.faqTopics : base.faqTopics,
+      cabins: Array.isArray(data.cabins) && data.cabins.length ? data.cabins : base.cabins,
       roteiro: Array.isArray(data.roteiro) ? data.roteiro : base.roteiro,
       roteiroPhotos: data.roteiroPhotos ?? base.roteiroPhotos ?? {},
     };

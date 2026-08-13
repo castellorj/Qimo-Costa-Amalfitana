@@ -137,6 +137,7 @@ export default function AdminPage() {
         ...data,
         pillars: data.pillars?.length ? data.pillars : approved.pillars,
         included: data.included?.length ? data.included : approved.included,
+        cabins: data.cabins?.length ? data.cabins : approved.cabins,
         faq: data.faq?.length ? data.faq : approved.faq,
         // Roteiro salvo vence; sem ele, usa o aprovado herdando as fotos legadas
         // (roteiroPhotos, slug → URL). As do banco vencem as do congelado; numa
@@ -464,6 +465,88 @@ export default function AdminPage() {
               className={inputCls}
               value={c.priceNote}
               onChange={(e) => set("priceNote", e.target.value)}
+            />
+          </div>
+        </Section>
+
+        <Section title="Cabines — categorias e valores">
+          {c.cabins.map((cab, i) => {
+            const upd = (patch: Partial<(typeof c.cabins)[number]>) => {
+              const n = [...c.cabins];
+              n[i] = { ...n[i], ...patch };
+              set("cabins", n);
+            };
+            const updSpec = (patch: Partial<(typeof c.cabins)[number]["specs"]>) => {
+              const n = [...c.cabins];
+              n[i] = { ...n[i], specs: { ...n[i].specs, ...patch } };
+              set("cabins", n);
+            };
+            return (
+              <div key={i} className="space-y-2 rounded-lg border border-deep/10 bg-deep/[0.02] p-4">
+                <div className="flex items-start justify-between gap-2">
+                  <span className="font-sans text-xs font-semibold uppercase tracking-wide2 text-deep/50">
+                    Cabine {i + 1}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => set("cabins", c.cabins.filter((_, j) => j !== i))}
+                    className="text-deep/40 hover:text-red-600"
+                    aria-label="Remover cabine"
+                  >
+                    <Trash2 className="h-4 w-4" />
+                  </button>
+                </div>
+                <ImageField value={cab.image} onChange={(url) => upd({ image: url })} />
+                <div className="grid grid-cols-[1.4fr_1fr] gap-3">
+                  <div>
+                    <label className={labelCls}>Nome</label>
+                    <input className={inputCls} value={cab.name} placeholder="Cabine C" onChange={(e) => upd({ name: e.target.value })} />
+                  </div>
+                  <div>
+                    <label className={labelCls}>Preço</label>
+                    <input className={inputCls} value={cab.price} placeholder="€ 5.950" onChange={(e) => upd({ price: e.target.value })} />
+                  </div>
+                </div>
+                <div>
+                  <label className={labelCls}>Deck</label>
+                  <input className={inputCls} value={cab.deck} placeholder="Deck inferior · Oceans" onChange={(e) => upd({ deck: e.target.value })} />
+                </div>
+                <div className="grid grid-cols-3 gap-3">
+                  <div>
+                    <label className={labelCls}>Janela</label>
+                    <input className={inputCls} value={cab.specs.window} onChange={(e) => updSpec({ window: e.target.value })} />
+                  </div>
+                  <div>
+                    <label className={labelCls}>Camas</label>
+                    <input className={inputCls} value={cab.specs.beds} onChange={(e) => updSpec({ beds: e.target.value })} />
+                  </div>
+                  <div>
+                    <label className={labelCls}>Tamanho</label>
+                    <input className={inputCls} value={cab.specs.size} onChange={(e) => updSpec({ size: e.target.value })} />
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+          <button
+            type="button"
+            onClick={() =>
+              set("cabins", [
+                ...c.cabins,
+                { name: "", deck: "", price: "", image: "", specs: { window: "", beds: "", size: "" } },
+              ])
+            }
+            className="flex items-center gap-1.5 font-sans text-sm text-gold-deep"
+          >
+            <Plus className="h-4 w-4" /> Adicionar cabine
+          </button>
+          <div className="pt-2">
+            <label className={labelCls}>Nota abaixo das cabines</label>
+            <textarea
+              rows={3}
+              className={`${inputCls} resize-none`}
+              value={c.cabinsNote}
+              onChange={(e) => set("cabinsNote", e.target.value)}
             />
           </div>
         </Section>

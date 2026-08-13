@@ -8,7 +8,6 @@ import { RoteiroGrid } from "@/components/proposal/roteiro-grid";
 import { FaqTopics } from "@/components/proposal/faq-topics";
 import { EntryScreen } from "@/components/proposal/entry-screen";
 import { CabinsCarousel } from "@/components/proposal/cabins-carousel";
-import { cabins, cabinsNote } from "@/content/cabins";
 import { proposal } from "@/content/proposal";
 import { getEditableContent } from "@/lib/content-remote";
 import { formatRange } from "@/lib/date";
@@ -192,9 +191,11 @@ export default async function Home() {
         </Reveal>
 
         {/* ---- Categorias de cabine (carrossel, como o roteiro) ---- */}
-        <Reveal className="mx-auto max-w-6xl">
-          <CabinsCarousel items={cabins} note={cabinsNote} />
-        </Reveal>
+        {c.cabins.length > 0 && (
+          <Reveal className="mx-auto max-w-6xl">
+            <CabinsCarousel items={c.cabins} note={c.cabinsNote} />
+          </Reveal>
+        )}
       </section>
 
       {/* ================= · PRINCIPAIS DÚVIDAS ======================= */}
@@ -222,7 +223,7 @@ export default async function Home() {
         <div className="scrim-full absolute inset-0" />
         <div className="text-on-photo relative z-10 mx-auto max-w-xl text-center">
           <Kicker dark>{c.guestsNote}</Kicker>
-          <h2 className="mt-5 font-cormorant text-5xl font-light uppercase leading-[0.95] tracking-[0.04em] text-offwhite sm:text-7xl">
+          <h2 className="mt-5 font-cormorant text-[clamp(1.9rem,6.5vw,4rem)] font-light uppercase leading-[0.98] tracking-[0.04em] text-offwhite text-balance">
             {c.finaleTitle}
           </h2>
           <div className="rule-gold mx-auto my-7 !bg-gold/70" />
