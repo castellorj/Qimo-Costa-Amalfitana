@@ -130,24 +130,6 @@ export default async function Home() {
         />
       </section>
 
-      {/* ============= 3 · GALERIA — EDIÇÕES ANTERIORES ================ */}
-      {c.pastEditions.length > 0 && (
-        <section id="galeria" className="bg-deep py-12 text-offwhite sm:py-16">
-          <Reveal className="mx-auto mb-8 max-w-editorial px-6 text-center">
-            <Kicker dark>{c.pastKicker}</Kicker>
-            <h2 className="mt-3 font-cormorant text-4xl leading-tight text-offwhite sm:text-5xl">
-              {c.pastTitle}
-            </h2>
-            <p className="mt-3 font-sans text-sm leading-relaxed text-offwhite/60">
-              {c.pastSubtitle}
-            </p>
-          </Reveal>
-          <Reveal className="mx-auto max-w-6xl px-6">
-            <PastEditions items={c.pastEditions} />
-          </Reveal>
-        </section>
-      )}
-
       {/* ===================== · A EMBARCAÇÃO ========================== */}
       {c.boatPhotos.length > 0 && (
         <section id="barco" className="bg-sand-light py-12 sm:py-16">
@@ -172,6 +154,24 @@ export default async function Home() {
               </p>
             </Reveal>
           )}
+        </section>
+      )}
+
+      {/* ============= · GALERIA — EDIÇÕES ANTERIORES ================ */}
+      {c.pastEditions.length > 0 && (
+        <section id="galeria" className="bg-deep py-12 text-offwhite sm:py-16">
+          <Reveal className="mx-auto mb-8 max-w-editorial px-6 text-center">
+            <Kicker dark>{c.pastKicker}</Kicker>
+            <h2 className="mt-3 font-cormorant text-4xl leading-tight text-offwhite sm:text-5xl">
+              {c.pastTitle}
+            </h2>
+            <p className="mt-3 font-sans text-sm leading-relaxed text-offwhite/60">
+              {c.pastSubtitle}
+            </p>
+          </Reveal>
+          <Reveal className="mx-auto max-w-6xl px-6">
+            <PastEditions items={c.pastEditions} />
+          </Reveal>
         </section>
       )}
 

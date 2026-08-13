@@ -25,8 +25,8 @@ export function BrandLogo({ nav }: { nav: NavLabels }) {
   useEffect(() => {
     const all = [
       { id: "roteiro", label: nav.roteiro },
-      { id: "galeria", label: nav.galeria },
       { id: "barco", label: nav.barco },
+      { id: "galeria", label: nav.galeria },
       { id: "valores", label: nav.valores },
       { id: "duvidas", label: nav.duvidas },
     ];
