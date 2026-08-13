@@ -1,4 +1,4 @@
-import { ChevronDown, Check, Instagram, Globe } from "lucide-react";
+import { ChevronDown, Instagram, Globe } from "lucide-react";
 import { EditorialImage } from "@/components/ui/editorial-image";
 import { Reveal, RevealGroup } from "@/components/motion/reveal";
 import { PastEditions } from "@/components/proposal/past-editions";
@@ -231,33 +231,9 @@ export default async function Home() {
           ))}
         </RevealGroup>
         {cabinsNote && (
-          <p className="mx-auto mb-12 max-w-editorial text-center font-sans text-xs leading-relaxed text-deep/55">
+          <p className="mx-auto max-w-editorial text-center font-sans text-xs leading-relaxed text-deep/55">
             {cabinsNote}
           </p>
-        )}
-
-        <RevealGroup className="mx-auto grid max-w-4xl gap-x-10 gap-y-4 sm:grid-cols-2">
-          {c.included.map((it) => (
-            <Reveal as="div" key={it.label} className="flex gap-3.5 border-b border-deep/10 pb-4">
-              <Check className="mt-1 h-5 w-5 shrink-0 text-deep-700" />
-              <div>
-                <p className="font-cormorant text-xl text-deep">{it.label}</p>
-                {it.detail && <p className="font-sans text-sm text-deep/55">{it.detail}</p>}
-              </div>
-            </Reveal>
-          ))}
-        </RevealGroup>
-        {c.notIncluded.trim() && (
-          <div className="mx-auto mt-10 max-w-lg rounded-xl border border-gold/30 bg-sand-light/70 px-6 py-5 text-center">
-            {c.notIncludedLabel.trim() && (
-              <p className="font-sans text-xs font-semibold uppercase tracking-wide2 text-deep-700">
-                {c.notIncludedLabel}
-              </p>
-            )}
-            <p className="mt-2 font-sans text-[0.98rem] leading-relaxed text-deep/75">
-              {c.notIncluded}
-            </p>
-          </div>
         )}
       </section>
 
