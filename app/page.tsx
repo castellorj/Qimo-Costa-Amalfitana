@@ -225,7 +225,7 @@ export default async function Home() {
         <EditorialImage
           src="/images/amalfi/naples-bay-farewell.jpg"
           alt="O golfo de Nápoles ao entardecer, com o Vesúvio ao fundo"
-          wrapperClassName="absolute inset-0 opacity-45"
+          wrapperClassName="absolute inset-0 opacity-70"
           kenBurns
           sizes="100vw"
         />
