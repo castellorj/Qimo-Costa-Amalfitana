@@ -50,12 +50,14 @@ export function RoteiroGrid({
 
   return (
     <>
-      {/* Dica de deslizar: pill discreta e elegante, centralizada */}
-      <div className="mb-7 flex justify-center">
-        <span className="inline-flex items-center rounded-full border border-deep-700/20 bg-white/50 px-5 py-2 font-sans text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-deep-700 shadow-[0_1px_0_rgba(255,255,255,0.6)] backdrop-blur-sm sm:text-[0.66rem]">
-          {swipeHint.replaceAll("{n}", String(items.length))}
-        </span>
-      </div>
+      {/* Dica de deslizar: pill discreta e elegante, centralizada. Some se vazia. */}
+      {swipeHint.trim() && (
+        <div className="mb-7 flex justify-center">
+          <span className="inline-flex items-center rounded-full border border-deep-700/20 bg-white/50 px-5 py-2 font-sans text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-deep-700 shadow-[0_1px_0_rgba(255,255,255,0.6)] backdrop-blur-sm sm:text-[0.66rem]">
+            {swipeHint.replaceAll("{n}", String(items.length))}
+          </span>
+        </div>
+      )}
 
       <div className="relative">
       <div ref={scroller} className="no-scrollbar flex snap-x snap-proximity gap-4 overflow-x-auto scroll-smooth pb-2">
