@@ -27,7 +27,16 @@ function resolveEmbed(href: string): { kind: "iframe" | "video"; url: string; po
 export function PastEditions({ items }: { items: PastMedia[] }) {
   const [idx, setIdx] = useState<number | null>(null);
   const touchX = useRef<number | null>(null);
+  const scroller = useRef<HTMLDivElement>(null);
   const n = items.length;
+
+  const nudge = (dir: number) => {
+    const el = scroller.current;
+    if (!el) return;
+    const card = el.querySelector("button");
+    const step = card ? card.getBoundingClientRect().width + 16 : el.clientWidth * 0.85;
+    el.scrollBy({ left: dir * step, behavior: "smooth" });
+  };
   const open = idx !== null ? items[idx] : null;
   const embed = open && open.type === "video" && open.href ? resolveEmbed(open.href) : null;
 
@@ -47,26 +56,53 @@ export function PastEditions({ items }: { items: PastMedia[] }) {
 
   return (
     <>
-      <div className="no-scrollbar flex snap-x snap-proximity gap-3 overflow-x-auto scroll-smooth px-6 pb-2 md:grid md:grid-cols-3 md:gap-4 md:overflow-visible md:px-0">
-        {items.map((m, i) => (
-          <button
-            type="button"
-            key={m.src + i}
-            onClick={() => setIdx(i)}
-            aria-label={m.alt}
-            className="relative aspect-[4/5] w-[78vw] shrink-0 snap-center overflow-hidden rounded-xl sm:w-[52vw] md:aspect-[4/3] md:w-full"
-          >
-            <EditorialImage src={m.src} alt={m.alt} wrapperClassName="absolute inset-0" sizes="(max-width: 768px) 78vw, 30vw" />
-            {m.type === "video" && (
-              <>
-                <div className="absolute inset-0 bg-deep/25" />
-                <span className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-offwhite/90 text-deep shadow-lg">
-                  <Play className="ml-0.5 h-6 w-6 fill-deep" />
-                </span>
-              </>
-            )}
-          </button>
-        ))}
+      <div className="relative">
+        <div
+          ref={scroller}
+          className="no-scrollbar flex snap-x snap-proximity gap-4 overflow-x-auto scroll-smooth pb-2"
+        >
+          {items.map((m, i) => (
+            <button
+              type="button"
+              key={m.src + i}
+              onClick={() => setIdx(i)}
+              aria-label={m.alt}
+              className="relative aspect-[4/5] w-[80%] shrink-0 snap-center overflow-hidden rounded-xl sm:aspect-[4/3] sm:w-[47%] lg:w-[31%]"
+            >
+              <EditorialImage src={m.src} alt={m.alt} wrapperClassName="absolute inset-0" sizes="(max-width: 640px) 80vw, (max-width: 1024px) 47vw, 31vw" />
+              {m.type === "video" && (
+                <>
+                  <div className="absolute inset-0 bg-deep/25" />
+                  <span className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-offwhite/90 text-deep shadow-lg">
+                    <Play className="ml-0.5 h-6 w-6 fill-deep" />
+                  </span>
+                </>
+              )}
+            </button>
+          ))}
+        </div>
+
+        {/* Setas laterais — só no desktop (no mobile vale o gesto de deslizar) */}
+        {n > 1 && (
+          <>
+            <button
+              type="button"
+              onClick={() => nudge(-1)}
+              aria-label="Anterior"
+              className="absolute left-1 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-deep-700/15 bg-white/85 text-deep-700 shadow-md backdrop-blur transition hover:bg-white md:flex"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+            <button
+              type="button"
+              onClick={() => nudge(1)}
+              aria-label="Próxima"
+              className="absolute right-1 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-deep-700/15 bg-white/85 text-deep-700 shadow-md backdrop-blur transition hover:bg-white md:flex"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
+          </>
+        )}
       </div>
 
       {open &&

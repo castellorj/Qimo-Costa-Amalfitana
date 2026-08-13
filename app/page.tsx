@@ -1,12 +1,13 @@
 import { ChevronDown, Instagram, Globe } from "lucide-react";
 import { EditorialImage } from "@/components/ui/editorial-image";
-import { Reveal, RevealGroup } from "@/components/motion/reveal";
+import { Reveal } from "@/components/motion/reveal";
 import { PastEditions } from "@/components/proposal/past-editions";
 import { Countdown } from "@/components/proposal/countdown";
 import { BrandLogo } from "@/components/proposal/brand-logo";
 import { RoteiroGrid } from "@/components/proposal/roteiro-grid";
 import { FaqTopics } from "@/components/proposal/faq-topics";
 import { EntryScreen } from "@/components/proposal/entry-screen";
+import { CabinsCarousel } from "@/components/proposal/cabins-carousel";
 import { cabins, cabinsNote } from "@/content/cabins";
 import { proposal } from "@/content/proposal";
 import { getEditableContent } from "@/lib/content-remote";
@@ -142,7 +143,7 @@ export default async function Home() {
               {c.pastSubtitle}
             </p>
           </Reveal>
-          <Reveal className="mx-auto max-w-6xl md:px-6">
+          <Reveal className="mx-auto max-w-6xl px-6">
             <PastEditions items={c.pastEditions} />
           </Reveal>
         </section>
@@ -162,7 +163,7 @@ export default async function Home() {
               </p>
             )}
           </Reveal>
-          <Reveal className="mx-auto max-w-6xl md:px-6">
+          <Reveal className="mx-auto max-w-6xl px-6">
             <PastEditions items={c.boatPhotos} />
           </Reveal>
           {c.boatNote && (
@@ -190,51 +191,10 @@ export default async function Home() {
           )}
         </Reveal>
 
-        {/* ---- Categorias de cabine (5 cards) ---- */}
-        <RevealGroup className="mx-auto mb-12 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {cabins.map((cab) => (
-            <Reveal
-              as="article"
-              key={cab.name}
-              className="flex flex-col overflow-hidden rounded-2xl border border-deep/10 bg-offwhite shadow-[0_1px_2px_rgba(4,32,60,0.04)]"
-            >
-              <EditorialImage
-                src={cab.image}
-                alt={`${cab.name} · Variety Voyager`}
-                wrapperClassName="relative aspect-[4/3] w-full"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-              <div className="flex flex-1 flex-col p-5">
-                <p className="font-sans text-[0.7rem] font-semibold uppercase tracking-wide2 text-gold-deep">
-                  {cab.deck}
-                </p>
-                <div className="mt-1 flex items-baseline justify-between gap-3">
-                  <h3 className="font-cormorant text-2xl text-deep">{cab.name}</h3>
-                  <span className="font-cormorant text-2xl text-deep-700">{cab.price}</span>
-                </div>
-                <dl className="mt-4 flex flex-col gap-2 border-t border-deep/10 pt-4 font-sans text-sm">
-                  <div className="flex justify-between gap-4">
-                    <dt className="text-deep/45">Janela</dt>
-                    <dd className="text-right text-deep/80">{cab.specs.window}</dd>
-                  </div>
-                  <div className="flex justify-between gap-4">
-                    <dt className="text-deep/45">Camas</dt>
-                    <dd className="text-right text-deep/80">{cab.specs.beds}</dd>
-                  </div>
-                  <div className="flex justify-between gap-4">
-                    <dt className="text-deep/45">Tamanho</dt>
-                    <dd className="text-right text-deep/80">{cab.specs.size}</dd>
-                  </div>
-                </dl>
-              </div>
-            </Reveal>
-          ))}
-        </RevealGroup>
-        {cabinsNote && (
-          <p className="mx-auto max-w-editorial text-center font-sans text-xs leading-relaxed text-deep/55">
-            {cabinsNote}
-          </p>
-        )}
+        {/* ---- Categorias de cabine (carrossel, como o roteiro) ---- */}
+        <Reveal className="mx-auto max-w-6xl">
+          <CabinsCarousel items={cabins} note={cabinsNote} />
+        </Reveal>
       </section>
 
       {/* ================= · PRINCIPAIS DÚVIDAS ======================= */}
