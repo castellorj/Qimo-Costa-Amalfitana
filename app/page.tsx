@@ -191,9 +191,11 @@ export default async function Home() {
           <h2 className="mt-3 font-cormorant text-4xl leading-tight sm:text-5xl">
             {c.valueTitle}
           </h2>
-          <p className="mt-4 font-cormorant text-3xl text-deep-700">
-            {c.priceFrom ? `${c.priceLabel} ${c.priceFrom}`.trim() : c.priceFallback}
-          </p>
+          {c.priceFrom.trim() && (
+            <p className="mt-4 font-cormorant text-3xl text-deep-700">
+              {`${c.priceLabel} ${c.priceFrom}`.trim()}
+            </p>
+          )}
           {c.priceNote && (
             <p className="mt-2 font-sans text-sm text-deep/60">{c.priceNote}</p>
           )}
