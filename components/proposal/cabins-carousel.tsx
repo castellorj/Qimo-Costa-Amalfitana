@@ -68,7 +68,7 @@ export function CabinsCarousel({ items, note }: { items: Cabin[]; note?: string 
         type="button"
         onClick={() => nudge(-1)}
         aria-label="Cabine anterior"
-        className="absolute left-1 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-deep-700/15 bg-white/85 text-deep-700 shadow-md backdrop-blur transition hover:bg-white md:flex"
+        className="absolute left-1 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-deep-700/15 bg-white/85 text-deep-700 shadow-md backdrop-blur transition hover:bg-white md:h-12 md:w-12"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
@@ -76,7 +76,7 @@ export function CabinsCarousel({ items, note }: { items: Cabin[]; note?: string 
         type="button"
         onClick={() => nudge(1)}
         aria-label="Próxima cabine"
-        className="absolute right-1 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-deep-700/15 bg-white/85 text-deep-700 shadow-md backdrop-blur transition hover:bg-white md:flex"
+        className="absolute right-1 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-deep-700/15 bg-white/85 text-deep-700 shadow-md backdrop-blur transition hover:bg-white md:h-12 md:w-12"
       >
         <ChevronRight className="h-6 w-6" />
       </button>
