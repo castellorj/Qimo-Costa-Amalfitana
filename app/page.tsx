@@ -232,7 +232,7 @@ export default async function Home() {
         <div className="scrim-full absolute inset-0" />
         <div className="text-on-photo relative z-10 mx-auto max-w-xl text-center">
           <Kicker dark>{c.guestsNote}</Kicker>
-          <h2 className="mt-5 font-cormorant text-[clamp(1.9rem,6.5vw,4rem)] font-light uppercase leading-[0.98] tracking-[0.04em] text-offwhite text-balance">
+          <h2 className="mt-5 font-cormorant text-[clamp(1.75rem,5vw,3.5rem)] font-light uppercase leading-[1.05] tracking-[0.08em] text-offwhite text-balance">
             {c.finaleTitle}
           </h2>
           <div className="rule-gold mx-auto my-7 !bg-gold/70" />
