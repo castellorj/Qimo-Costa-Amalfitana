@@ -6,6 +6,7 @@ import { Countdown } from "@/components/proposal/countdown";
 import { BrandLogo } from "@/components/proposal/brand-logo";
 import { RoteiroGrid } from "@/components/proposal/roteiro-grid";
 import { FaqTopics } from "@/components/proposal/faq-topics";
+import { CancellationPolicy } from "@/components/proposal/cancellation-policy";
 import { EntryScreen } from "@/components/proposal/entry-screen";
 import { CabinsCarousel } from "@/components/proposal/cabins-carousel";
 import { proposal } from "@/content/proposal";
@@ -60,6 +61,7 @@ export default async function Home() {
           src={proposal.hero.image}
           alt="A costa italiana vista do mar, ao amanhecer"
           wrapperClassName="absolute inset-0"
+          className="object-[28%_center] sm:object-center"
           priority
           kenBurns
           sizes="100vw"
@@ -218,6 +220,7 @@ export default async function Home() {
           </Reveal>
           <Reveal>
             <FaqTopics topics={c.faqTopics} />
+            <CancellationPolicy />
           </Reveal>
         </section>
       )}
