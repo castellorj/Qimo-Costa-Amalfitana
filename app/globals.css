@@ -145,6 +145,17 @@
       );
   }
 
+  /* Hero: no mobile, desloca o enquadramento para a esquerda (valoriza o mar);
+     no desktop fica centralizado. */
+  .hero-focus-sea {
+    object-position: center;
+  }
+  @media (max-width: 639.98px) {
+    .hero-focus-sea {
+      object-position: 28% center;
+    }
+  }
+
   /* Text laid directly over a photo — a soft dark halo guarantees contrast
      even where the image runs bright (sky, water, stone). */
   .text-on-photo {

@@ -61,7 +61,7 @@ export default async function Home() {
           src={proposal.hero.image}
           alt="A costa italiana vista do mar, ao amanhecer"
           wrapperClassName="absolute inset-0"
-          className="object-[28%_center] sm:object-center"
+          className="hero-focus-sea"
           priority
           kenBurns
           sizes="100vw"
